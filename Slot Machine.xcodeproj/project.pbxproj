@@ -21,6 +21,7 @@
 		0448B4CF25E79C25000BC46F /* high-score.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0448B4C725E79C25000BC46F /* high-score.mp3 */; };
 		0448B4D725E7A9F3000BC46F /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448B4D625E7A9F3000BC46F /* LogoView.swift */; };
 		0448B4DA25E7AA73000BC46F /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448B4D925E7AA73000BC46F /* Modifiers.swift */; };
+		0448B4DE25E7B657000BC46F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448B4DD25E7B657000BC46F /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		0448B4C725E79C25000BC46F /* high-score.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "high-score.mp3"; sourceTree = "<group>"; };
 		0448B4D625E7A9F3000BC46F /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		0448B4D925E7AA73000BC46F /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		0448B4DD25E7B657000BC46F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				0448B4D925E7AA73000BC46F /* Modifiers.swift */,
+				0448B4DD25E7B657000BC46F /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0448B4DE25E7B657000BC46F /* Extensions.swift in Sources */,
 				0448B4DA25E7AA73000BC46F /* Modifiers.swift in Sources */,
 				0448B4AD25E799D1000BC46F /* ContentView.swift in Sources */,
 				0448B4D725E7A9F3000BC46F /* LogoView.swift in Sources */,

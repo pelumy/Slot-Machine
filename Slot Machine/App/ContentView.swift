@@ -23,11 +23,38 @@ struct ContentView: View {
                 LogoView()
                 Spacer()
                 // MARK: - SCORE
+                HStack {
+                    HStack(alignment: .center, spacing: nil, content: {
+                        Text("Your\nCoins".uppercased())
+                            .scoreLabelStyle()
+                            .multilineTextAlignment(.trailing)
+                        
+                        Text("100")
+                            .scoreNumberStyle()
+                            .modifier(ScoreNumberModifier())
+                    }) //: HSTACK
+                    .modifier(ScoreContainerModifier())
+                    
+                    Spacer()
+                    
+                    HStack(alignment: .center, spacing: nil, content: {
+                        Text("200")
+                            .scoreNumberStyle()
+                            .modifier(ScoreNumberModifier())
+                        
+                        Text("High\nScore".uppercased())
+                            .scoreLabelStyle()
+                            .multilineTextAlignment(.leading )
+                        
+                    }) //: HSTACK
+                    .modifier(ScoreContainerModifier())
+                    
+                } //: HSTACK
                 
                 // MARK: - SLOT MACHINE
                 
                 // MARK: - FOOTER
-                
+                Spacer()
             }) //: VSTACK
             
             // MARK: - BUTTONS
