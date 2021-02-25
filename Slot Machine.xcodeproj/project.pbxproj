@@ -23,6 +23,7 @@
 		0448B4DA25E7AA73000BC46F /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448B4D925E7AA73000BC46F /* Modifiers.swift */; };
 		0448B4DE25E7B657000BC46F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448B4DD25E7B657000BC46F /* Extensions.swift */; };
 		0448B4E425E7C19E000BC46F /* ReelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448B4E325E7C19E000BC46F /* ReelView.swift */; };
+		0448B4E725E7E71E000BC46F /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448B4E625E7E71E000BC46F /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		0448B4D925E7AA73000BC46F /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		0448B4DD25E7B657000BC46F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0448B4E325E7C19E000BC46F /* ReelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelView.swift; sourceTree = "<group>"; };
+		0448B4E625E7E71E000BC46F /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			children = (
 				0448B4D625E7A9F3000BC46F /* LogoView.swift */,
 				0448B4E325E7C19E000BC46F /* ReelView.swift */,
+				0448B4E625E7E71E000BC46F /* InfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				0448B4AD25E799D1000BC46F /* ContentView.swift in Sources */,
 				0448B4D725E7A9F3000BC46F /* LogoView.swift in Sources */,
 				0448B4AB25E799D1000BC46F /* Slot_MachineApp.swift in Sources */,
+				0448B4E725E7E71E000BC46F /* InfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
