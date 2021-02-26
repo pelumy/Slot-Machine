@@ -17,6 +17,7 @@ struct ContentView: View {
     @State private var showingInfoView = false
     @State private var isActivebet10 = true
     @State private var isActivebet20 = false
+    @State private var showingModal = false
     
     // MARK: - FUNCTIONS
     
@@ -69,6 +70,12 @@ struct ContentView: View {
     }
     
     // game is over
+    func isGameOver() {
+        if coins <= 0 {
+            // show modal window
+            showingModal.toggle()
+        }
+    }
     
     // MARK: - BODY
     var body: some View {
@@ -149,6 +156,7 @@ struct ContentView: View {
                     Button(action: {
                        spinReels()
                         checkWinings()
+                        isGameOver()
                     }, label: {
                         Image("gfx-spin")
                             .renderingMode(.original)
@@ -226,8 +234,70 @@ struct ContentView: View {
             
             .padding()
             .frame(maxWidth: 720)
+            .blur(radius: showingModal ? 5 : 0)
             
             // MARK: - POPUP
+            if showingModal {
+                ZStack {
+                    Color("ColorTransparentBlack")
+                        .edgesIgnoringSafeArea(.all)
+                    
+                    // modal
+                    VStack(alignment: .center, spacing: nil, content: {
+                        
+                        // title
+                        Text("Game Over".uppercased())
+                            .font(.system(.title, design: .rounded))
+                            .fontWeight(.heavy)
+                            .padding()
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .foregroundColor(.white)
+                            .background(Color("ColorPink"))
+                        
+                        Spacer()
+                        
+                        // message
+                        VStack(alignment: .center, spacing: 16, content: {
+                            Image("gfx-seven-reel")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxHeight: 72)
+                            
+                            Text("Bad luck! You lost all of the coins. \nLet's play again!")
+                                .font(.system(.body, design: .rounded))
+                                .lineLimit(2)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.gray)
+                                .layoutPriority(1)
+                            
+                            Button(action: {
+                                showingModal = false
+                                coins = 100
+                            }, label: {
+                                Text(" New Game".uppercased())
+                                    .font(.system(.body, design: .rounded))
+                                    .fontWeight(.semibold)
+                                    .accentColor(Color("ColorPink"))
+                                    .padding(.horizontal, 12)
+                                    .padding(.vertical, 8)
+                                    .frame(minWidth: 128)
+                                    .background(
+                                        Capsule()
+                                            .strokeBorder(lineWidth: 1.75)
+                                            .foregroundColor(Color("ColorPink"))
+                                    )
+                            })
+                        }) // vstack
+                        
+                        Spacer()
+                        
+                    })
+                    .frame(minWidth: 280, idealWidth: 280, maxWidth: 320, minHeight: 260, idealHeight: 280, maxHeight: 320, alignment: .center)
+                    .background(Color.white)
+                    .cornerRadius(20)
+                    .shadow(color: Color("ColorTransparentBlack"), radius: 6, x: 0, y: 8)
+                } // zstack
+            }
             
         } //: ZSTACK
         .sheet(isPresented: $showingInfoView, content: {
