@@ -27,6 +27,19 @@
 		0458C7F425E93A9D0066E750 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458C7F325E93A9D0066E750 /* PlaySound.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0458C80525E94D0D0066E750 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0448B4A725E799D1000BC46F /* Slot Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slot Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0448B4AA25E799D1000BC46F /* Slot_MachineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slot_MachineApp.swift; sourceTree = "<group>"; };
@@ -48,6 +61,7 @@
 		0448B4E325E7C19E000BC46F /* ReelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelView.swift; sourceTree = "<group>"; };
 		0448B4E625E7E71E000BC46F /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		0458C7F325E93A9D0066E750 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		0458C7F625E949320066E750 /* Slot Machine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Slot Machine.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +94,7 @@
 		0448B4A925E799D1000BC46F /* Slot Machine */ = {
 			isa = PBXGroup;
 			children = (
+				0458C7F625E949320066E750 /* Slot Machine.entitlements */,
 				0448B4BD25E79BED000BC46F /* App */,
 				0448B4D225E79C52000BC46F /* Views */,
 				0448B4D325E79C58000BC46F /* Helpers */,
@@ -154,6 +169,7 @@
 				0448B4A325E799D1000BC46F /* Sources */,
 				0448B4A425E799D1000BC46F /* Frameworks */,
 				0448B4A525E799D1000BC46F /* Resources */,
+				0458C80525E94D0D0066E750 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -356,6 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Slot Machine/Slot Machine.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Slot Machine/Preview Content\"";
 				DEVELOPMENT_TEAM = WW6582Q94G;
@@ -368,6 +385,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chavicodes.Slot-Machine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -378,6 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Slot Machine/Slot Machine.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Slot Machine/Preview Content\"";
 				DEVELOPMENT_TEAM = WW6582Q94G;
@@ -390,6 +409,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chavicodes.Slot-Machine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
