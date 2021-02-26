@@ -34,6 +34,7 @@ struct InfoView: View {
         }) // vstack
         .padding(.top, 40)
         .overlay(Button(action: {
+            audioPlayer?.stop()
             presentationMode.wrappedValue.dismiss()
         }, label: {
             Image(systemName: "xmark.circle")
@@ -45,6 +46,9 @@ struct InfoView: View {
         , alignment: .topTrailing
         
         )
+        .onAppear(perform: {
+            playSound(fileName: "background-music", fileFormat: "mp3")
+        })
         
     }
 }
