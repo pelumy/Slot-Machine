@@ -51,7 +51,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/pelumy/Avocados.git
+   git clone https://github.com/pelumy/Slot-Machine.git
    ```
 
 
